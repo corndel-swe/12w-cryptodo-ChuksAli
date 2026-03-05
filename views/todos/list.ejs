@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, initial-scale=1.0"
+    />
+    <title>Cryptodos | Todos</title>
+  </head>
+  <body>
+    <h1>Todos</h1>
+    <ul>
+      <% todos.forEach((todo) => { %>
+      <li>
+        <span> <%= todo.description %> </span>
+        <% if (todo.completed) { %>
+        <b>(completed)</b>
+        <% } %>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

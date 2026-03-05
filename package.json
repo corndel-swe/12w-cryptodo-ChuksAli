@@ -1,0 +1,30 @@
+{
+  "name": "js-cryptodo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Welcome to Cryptodo! The security conscious todo list you know you can trust.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon run.js",
+    "db:migrate": "for file in db/migrations/*.sql; do sqlite3 db.sqlite < \"$file\"; done",
+    "db:seed": "for file in db/seeds/*.sql; do sqlite3 db.sqlite < \"$file\"; done",
+    "db:reset": "rm -f db.sqlite && npm run db:migrate && npm run db:seed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "shx": "^0.3.4"
+  }
+}
