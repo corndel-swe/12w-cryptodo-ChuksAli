@@ -58,7 +58,7 @@ export const createTodo = async (req, res) => {
 
     const { newitem } = req.body
 
-    await db.raw('insert into todos (user_id, description) values (?, ?)', [user.user_id, newitem]);
+    await db.raw('insert into todos (user_id, description) values (?, ?)', [user.id, newitem]);
 
     res.redirect('/todos')
 
